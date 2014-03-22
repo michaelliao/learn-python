@@ -72,6 +72,3 @@ class User(Model):
 
 u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')
 u.save()
-
-
-
