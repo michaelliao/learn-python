@@ -64,6 +64,8 @@ class Model(dict):
         print('SQL: %s' % sql)
         print('ARGS: %s' % str(args))
 
+# testing code:
+
 class User(Model):
     id = IntegerField('uid')
     name = StringField('username')
