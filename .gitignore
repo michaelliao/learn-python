@@ -1,5 +1,8 @@
 *.py[cod]
 
+test.db
+test.txt
+
 # C extensions
 *.so
 
