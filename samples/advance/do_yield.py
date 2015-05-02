@@ -6,12 +6,9 @@ def each_ascii(s):
         yield ord(ch)
     return '%s chars' % len(s)
 
-def yield_from(g):
-    try:
-        while True:
-            next(g)
-    except StopIteration as s:
-        return s.value
+def yield_from(s):
+    r = yield from each_ascii(s)
+    print(r)
 
 def main():
     for x in each_ascii('abc'):
@@ -26,6 +23,7 @@ def main():
     # using yield from in main() will change main() from function to generator:
     # r = yield from each_ascii('hello')
 
-    print(yield_from(each_ascii('hello'))) # => '5 chars'
+    for ch in yield_from('hello'):
+        pass
 
 main()
